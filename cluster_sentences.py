@@ -3,6 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.corpus import stopwords
 from aux_functions import word_tokenizer
 
+
 def cluster_sentences(sentences, clust_algorithm):
     tfidf_vectorizer = TfidfVectorizer(tokenizer=word_tokenizer,
                                        stop_words=stopwords.words('english'),

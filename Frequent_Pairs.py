@@ -3,6 +3,7 @@ import numpy as np
 from collections import Counter
 from itertools import combinations
 
+
 def Frequent_Pairs(neg_sentences):
 
     d = Counter()
@@ -55,5 +56,6 @@ def Frequent_Pairs(neg_sentences):
         score_vector.append(ordered_items[i][1])
     sorted_ind = np.flip(np.argsort(score_vector))
     for i in range(0, len(sorted_ind)):
-        sorted_items.append((sorted_values[sorted_ind[i]], score_vector[sorted_ind[i]]))
+        sorted_items.append(
+            (sorted_values[sorted_ind[i]], score_vector[sorted_ind[i]]))
     return sorted_items
