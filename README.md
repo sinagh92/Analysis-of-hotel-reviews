@@ -25,18 +25,18 @@ In this step, we perform a clustering algorithm (BIRCH or K-means) on positive a
 ### Step 3: Giving score to each review
 In this step, we give scores to each review based on the frequent words which is present in that review. In order to do so, first we define word scores. We use the support of a frequent word as its score. 
 
-〖Score〗_i=Support(〖Frequent_word〗_i )
-
-![](https://myoctocat.com/assets/images/base-octocat.svg)
+![](report_data/formula_3.png)
 
 
 Then, we define a vector M of all frequent words in each cluster. For each review, we have a M’ vector which has value 1 if that frequent word is present in the review and value 0 if that word is not present in the review.
 
-M^'=[0 0 1 0…0 1  0 ]        M=[Room   Staff   Restaurant  …Location ]
+
+![](report_data/formula_4.png)
+
 
 Therefore, for each review, the sum of supports for each frequent word is calculated. Since some reviews may have a lot of words and are not summarized enough, we try to weight our algorithm to prefer smaller sentences which contain most frequent words. We have seen that smaller sentences are more informative. Therefore, we use the following formula for review scores.
 
-Score of a Review=  (∑_iϵ M^ ▒S_i )/N
+![](report_data/formula_5.png)
 
 Where N is the number of words in that review. 
 
