@@ -4,6 +4,7 @@ import nltk
 from nltk.corpus import stopwords
 from collections import Counter
 from itertools import combinations
+import numpy as np
 
 
 def find_frequent_items(sentences):
@@ -28,7 +29,7 @@ def find_frequent_items(sentences):
 
 
 def get_words_for_each_cluster(Pos_reviews):
-    # finding frequent words and their support in each cluster
+    """finding frequent words and their support in each cluster"""
 
     Positive_Reviews = Pos_reviews.all_reviews
     clusters_pos = Pos_reviews.clusters

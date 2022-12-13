@@ -5,7 +5,7 @@ from itertools import combinations
 
 
 def Frequent_Pairs(neg_sentences):
-
+    """ Finding the frequent paies for the set of sentences"""
     d = Counter()
     nouns = []
     adj = []

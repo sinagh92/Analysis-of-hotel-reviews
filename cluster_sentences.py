@@ -5,6 +5,7 @@ from aux_functions import word_tokenizer
 
 
 def cluster_sentences(sentences, clust_algorithm):
+    """ Apply the clustering algorithm (input of function) on the sentences using TF-IDF vector"""
     tfidf_vectorizer = TfidfVectorizer(tokenizer=word_tokenizer,
                                        stop_words=stopwords.words('english'),
                                        max_df=0.9,
